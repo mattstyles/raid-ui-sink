@@ -5,12 +5,15 @@ import { debug } from '@raid/addons'
 import { signal } from 'signals'
 import { App } from 'components/app'
 import { Navigation } from 'components/navigation'
+import { update as splashUpdate } from 'core/splash'
 
 const el = document.querySelector('.js-main')
 
 if (process.env.DEBUG) {
   signal.register(debug('[raid-ui-sink]'))
 }
+
+signal.register(splashUpdate)
 
 signal.observe(state => {
   render(

@@ -3,9 +3,12 @@ import { Signal } from 'raid'
 import { adaptor } from '@raid/addons'
 import { initial as navigationState } from '@raid/navigator'
 
+import { splash } from 'core/splash'
+
 const initial = {
   ...navigationState,
-  message: 'raid-ui-sink'
+  message: 'raid-ui-sink',
+  splash
 }
 
 export const signal = new Signal(initial)
