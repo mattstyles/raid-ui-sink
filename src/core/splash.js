@@ -42,7 +42,6 @@ export const actions = {
 }
 
 export const update = safe((state, event) => {
-  console.log(event)
   if (event.type === 'splash:update') {
     return {
       ...state,
